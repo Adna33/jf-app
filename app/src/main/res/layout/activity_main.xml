@@ -16,10 +16,13 @@
         android:layout_height="wrap_content"
         android:columnCount="2"
         android:rowCount="2"
-        android:layout_margin="40dp"
-        android:layout_centerInParent="true"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp">
 
-        >
+
 
         <ImageButton
 
@@ -29,16 +32,18 @@
             android:src="@drawable/onama"
             android:background="@android:color/transparent"
             android:layout_gravity="left|top"
-            android:adjustViewBounds="false" />
+            android:adjustViewBounds="false"
+            android:layout_margin="30dp" />
 
         <ImageButton
 
         android:id="@+id/imageButton2"
-        android:layout_row="0"
+        android:layout_row="1"
         android:layout_column="1"
         android:src="@drawable/rasporedsajma"
         android:background="@android:color/transparent"
-        android:layout_gravity="left|top"/>
+        android:layout_gravity="left|top"
+            android:layout_margin="30dp" />
         <ImageButton
 
             android:id="@+id/imageButton3"
@@ -46,16 +51,18 @@
             android:layout_column="0"
             android:src="@drawable/mapa"
             android:background="@android:color/transparent"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:layout_margin="30dp" />
         <ImageButton
 
             android:id="@+id/imageButton4"
-            android:layout_row="1"
+            android:layout_row="0"
             android:layout_column="1"
 
             android:src="@drawable/kompanije"
             android:background="@android:color/transparent"
-            android:layout_gravity="left|top"/>
+            android:layout_gravity="left|top"
+            android:layout_margin="30dp" />
 
     </GridLayout>
 </RelativeLayout>
