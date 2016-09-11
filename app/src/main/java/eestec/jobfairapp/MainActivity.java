@@ -14,12 +14,20 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         setContentView(R.layout.activity_main);
 
         ActionBar ab = getSupportActionBar();
+
         ab.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+
 
         // Three tab to display in actionbar
         ab.addTab(ab.newTab().setText("Tab 1").setTabListener(this));
         ab.addTab(ab.newTab().setText("Tab 2").setTabListener(this));
         ab.addTab(ab.newTab().setText("Tab 3").setTabListener(this));
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.jf_logo_white);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
