@@ -1,6 +1,7 @@
 package eestec.jobfairapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -17,7 +18,7 @@ public class MainActivity extends Activity{
         imgBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "O nama", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
             }
         });
 
@@ -25,7 +26,7 @@ public class MainActivity extends Activity{
         imgBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Raspored", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, ScheduleActivity.class));
             }
         });
 
@@ -33,7 +34,7 @@ public class MainActivity extends Activity{
         imgBtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Mapa", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, MapActivity.class));
             }
         });
 
@@ -41,7 +42,7 @@ public class MainActivity extends Activity{
         imgBtn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Kompanije", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, CompaniesActivity.class));
             }
         });
     }
