@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
 
-    android:background="@drawable/startpicture">
+    android:background="@drawable/start_picture_1080_1920">
 
     <GridLayout
         android:layout_width="wrap_content"
