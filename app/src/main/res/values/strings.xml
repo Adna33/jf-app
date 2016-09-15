@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">JobFairApp</string>
+    <string name="app_name">JobFAIR</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_about_us">AboutUsActivity</string>
-    <string name="title_activity_map">MapActivity</string>
-    <string name="title_activity_companies">CompaniesActivity</string>
-    <string name="title_activity_schedule">ScheduleActivity</string>
+    <string name="title_activity_about_us">Informacije</string>
+    <string name="title_activity_map">Mapa</string>
+    <string name="title_activity_companies">Kompanije</string>
+    <string name="title_activity_schedule">Raspored</string>
 </resources>
