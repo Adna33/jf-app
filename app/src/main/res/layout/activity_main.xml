@@ -10,46 +10,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
 
-    android:background="@drawable/start_picture_1080_1920"
+    android:background="@drawable/start_picture_colors"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageButton"
+        android:src="@drawable/info_iv"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="120dp" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageButton3"
+        android:src="@drawable/kompanije_iv"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="-5dp" />
+
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="130dp">
+        android:id="@+id/imageButton2"
+        android:src="@drawable/raspored_iv"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="-10dp" />
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageButton"
-            android:src="@drawable/infobutton"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart" />
+    <ImageButton
+        android:layout_width="838dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageButton4"
+        android:src="@drawable/mapa_iv"
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/imageButton3"
-            android:src="@drawable/kompanijebutton"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart" />
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageButton2"
-            android:src="@drawable/kalendarbutton"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart" />
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton4"
-            android:src="@drawable/mapabutton"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart" />
-    </LinearLayout>
+        android:scaleType="fitStart"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="-10dp" />
 
 </LinearLayout>
