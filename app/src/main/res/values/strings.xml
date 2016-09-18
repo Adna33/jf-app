@@ -7,4 +7,5 @@
     <string name="title_activity_map">Mapa</string>
     <string name="title_activity_companies">Kompanije</string>
     <string name="title_activity_schedule">Raspored</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
