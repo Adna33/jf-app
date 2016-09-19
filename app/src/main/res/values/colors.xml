@@ -6,4 +6,8 @@
     <color name="eestecRed">#ee2f2e</color>
     <color name="darkRed">#df2b2a</color>
     <color name="white">#ffff</color>
+    <color name="orange">#d57946</color>
+    <color name="yellow"> #d5a246</color>
+    <color name="lightGreen">#b0b747</color>
+    <color name="darkGreen">#84b451</color>
 </resources>
