@@ -32,7 +32,9 @@ public class AboutUsActivity extends AppCompatActivity {
         switch(item.getItemId()) {
             case R.id.home:
 
-                startActivity(new Intent(AboutUsActivity.this, MainActivity.class));
+                Intent i = new Intent();
+                i = new Intent(this, MainActivity.class);
+                startActivity(i);
                 break;
 
             default:
