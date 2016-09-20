@@ -1,5 +1,6 @@
 package eestec.jobfairapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,7 +32,7 @@ public class AboutUsActivity extends AppCompatActivity {
         switch(item.getItemId()) {
             case R.id.home:
 
-                // Add your LOGIC Here
+                startActivity(new Intent(AboutUsActivity.this, MainActivity.class));
                 break;
 
             default:
