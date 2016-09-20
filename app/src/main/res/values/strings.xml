@@ -8,4 +8,5 @@
     <string name="title_activity_companies">Kompanije</string>
     <string name="title_activity_schedule">Raspored</string>
     <string name="title_activity_maps">Map</string>
+    <string name="linkEestec"><a href="http://http://www.eestec-sa.ba/">http://www.eestec-sa.ba/</a></string>
 </resources>
