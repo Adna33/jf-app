@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<LinearLayout
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,14 +16,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
 
-    android:background="@drawable/new_start"
+    android:background="@drawable/start_picture"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/jobfair" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:layout_width="match_parent"
@@ -27,7 +38,7 @@
             android:adjustViewBounds="true"
             android:scaleType="fitStart"
             android:background="@color/orange"
-            android:layout_marginTop="120dp" />
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -74,4 +85,8 @@
             android:background="@color/darkGreen" />
     </LinearLayout>
 
+
+
+
 </LinearLayout>
+</ScrollView>
