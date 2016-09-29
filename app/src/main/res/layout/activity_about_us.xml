@@ -19,22 +19,45 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="JobFAIR je sajam koji okuplja ambiciozne studente i diplomce tehničko-tehnoloških fakulteta i ekonomije u procesu traženja posla i usavršavanja u struci.\nOve godine održat će se 7. i 8. novembra u organizaciji Udruženja studenata elektrotehnike Evrope - EESTEC, lokalni komitet Sarajevo."
-            android:id="@+id/textView" />
+            android:id="@+id/informationLayout"
+            android:background="#c7c7c7">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="166dp"
+                android:layout_height="97dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/jf_logo"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JobFAIR je sajam koji okuplja ambiciozne studente i diplomce tehničko-tehnoloških fakulteta i ekonomije u procesu traženja posla i usavršavanja u struci. Ove godine održat će se 7. i 8. novembra u organizaciji Udruženja studenata elektrotehnike Evrope - EESTEC, lokalni komitet Sarajevo. Tehničko-tehnološka zanimanja uključuju područja istraživanja inženjerskih nauka poput računarsko-informatičkih, elektrotehnike, mašinstva, saobraćaja, telekomunikacija, građevine, arhitekture i slično.
+"
+                android:id="@+id/textView"
+                android:textSize="16dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/linkEestec"
-            android:autoLink="web"
-            android:id="@+id/eestecLink"
-            android:layout_centerInParent="true"
-            android:linksClickable="true"
-            android:textSize="20dp"
-            android:textColorLink="@color/eestecRed"/>
+            android:id="@+id/eestecLayout"
+            android:background="#c7c7c7"
+            android:layout_marginTop="5dp">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/eestecLogo"
+                android:src="@drawable/eestec_logo"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
