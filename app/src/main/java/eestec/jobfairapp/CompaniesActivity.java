@@ -58,13 +58,12 @@ public class CompaniesActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
         }
 
-
-        list = (ListView)findViewById(R.id.list);
         companyList = new ArrayList<Company>();
+        companyList.add(new Company("atlant","bbbb","heheh"));
+  // new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
+        ListView list = (ListView)findViewById(R.id.list);
         adapter = new CompanyAdapter(getApplicationContext(), R.layout.company_details, companyList);
         list.setAdapter(adapter);
-        new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
-
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

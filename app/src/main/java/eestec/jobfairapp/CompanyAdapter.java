@@ -14,7 +14,36 @@ import java.util.List;
  * Created by XMAN on 5.10.2016.
  */
 public class CompanyAdapter extends ArrayAdapter<Company> {
+    int Resource;
+    ArrayList<Company> companies = new ArrayList<Company>();
+    public CompanyAdapter(Context context, int resource, ArrayList<Company> objects) {
+        super(context, resource, objects);
+        Resource = resource;
+        companies=objects;
 
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+
+        Company company = getItem(position);
+
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.company_details, parent, false);
+        }
+
+
+        TextView company_name = (TextView) convertView.findViewById(R.id.company_name);
+        TextView company_email = (TextView) convertView.findViewById(R.id.company_email);
+        TextView company_web = (TextView) convertView.findViewById(R.id.company_web);
+
+        company_name.setText(company.name);
+        company_email.setText(company.email);
+        company_web.setText(company.web);
+
+        return convertView;
+    }
+/*
     ArrayList<Company> companyList;
     LayoutInflater vi;
     int Resource;
@@ -56,5 +85,5 @@ public class CompanyAdapter extends ArrayAdapter<Company> {
         public TextView company_web;
 
     }
-
+*/
 }
