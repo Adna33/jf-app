@@ -88,9 +88,10 @@ public class CompaniesActivity extends AppCompatActivity {
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 String rezultat = convertStreamToString(in);
-                JSONObject jo = new JSONObject(rezultat);
+                JSONArray companies = new JSONArray(rezultat);
 
-                JSONArray companies = jo.getJSONArray("");
+
+                //JSONArray companies = jo.getJSONArray("kompanije");
 
                 for (int i = 0; i < companies.length(); i++) {
                     JSONObject object = companies.getJSONObject(i);

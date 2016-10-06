@@ -36,11 +36,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="JobFAIR je sajam koji okuplja ambiciozne studente i diplomce tehničko-tehnoloških fakulteta i ekonomije u procesu traženja posla i usavršavanja u struci. Ove godine održat će se 7. i 8. novembra u organizaciji Udruženja studenata elektrotehnike Evrope - EESTEC, lokalni komitet Sarajevo. Tehničko-tehnološka zanimanja uključuju područja istraživanja inženjerskih nauka poput računarsko-informatičkih, elektrotehnike, mašinstva, saobraćaja, telekomunikacija, građevine, arhitekture i slično.
-"
                 android:id="@+id/textView"
                 android:textSize="16dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="@string/JobFARIR_text" />
 
         </LinearLayout>
 
