@@ -61,11 +61,10 @@ public class CompaniesActivity extends AppCompatActivity {
 
         list = (ListView)findViewById(R.id.list);
         companyList = new ArrayList<Company>();
+        adapter = new CompanyAdapter(getApplicationContext(), R.layout.company_details, companyList);
+        list.setAdapter(adapter);
         new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
 
-        adapter = new CompanyAdapter(getApplicationContext(), R.layout.company_details, companyList);
-
-        list.setAdapter(adapter);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -77,21 +76,38 @@ public class CompaniesActivity extends AppCompatActivity {
             }
         });
 
+        Toast.makeText(getApplicationContext(), "IN", Toast.LENGTH_LONG).show();
+
     }
 
 
     public class CompaniesAsyncTask extends AsyncTask<String, Void, Boolean>{
+
+
+        HttpURLConnection connection = null;
+        BufferedReader reader = null;
+        String result = "";
+
         @Override
         protected Boolean doInBackground(String... params) {
             try {
+
                 URL url = new URL(params[0]);
-                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                String rezultat = convertStreamToString(in);
-                JSONArray companies = new JSONArray(rezultat);
+                connection = (HttpURLConnection) url.openConnection();
 
+                if(connection.getResponseCode() != HttpURLConnection.HTTP_OK){ return false; }
 
-                //JSONArray companies = jo.getJSONArray("kompanije");
+                reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String line;
+                StringBuilder sb = new StringBuilder();
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "\n");
+                }
+                result = sb.toString();
+
+                //InputStream in = new BufferedInputStream(connection.getInputStream());
+                JSONArray companies = new JSONArray(result);
+
 
                 for (int i = 0; i < companies.length(); i++) {
                     JSONObject object = companies.getJSONObject(i);
@@ -103,7 +119,9 @@ public class CompaniesActivity extends AppCompatActivity {
                     company.setWeb(object.getString("web"));
 
                    companyList.add(company);
+
                 }
+
                 return true;
             }
         catch (IOException e) {
