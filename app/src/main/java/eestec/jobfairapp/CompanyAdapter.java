@@ -1,5 +1,6 @@
 package eestec.jobfairapp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,81 +10,54 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+public class CompanyAdapter extends ArrayAdapter<Company>{
 
-/**
- * Created by XMAN on 5.10.2016.
- */
-public class CompanyAdapter extends ArrayAdapter<Company> {
-    int Resource;
-    ArrayList<Company> companies = new ArrayList<Company>();
-    public CompanyAdapter(Context context, int resource, ArrayList<Company> objects) {
-        super(context, resource, objects);
-        Resource = resource;
-        companies=objects;
+    Context context;
+    int layoutResourceId;
+    ArrayList<Company> data = null;
 
+    public CompanyAdapter(Context context, int layoutResourceId, ArrayList<Company> data) {
+        super(context, layoutResourceId, data);
+        this.layoutResourceId = layoutResourceId;
+        this.context = context;
+        this.data = data;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        View row = convertView;
+        CompanyHolder holder = null;
 
-        Company company = getItem(position);
+        if(row == null)
+        {
+            LayoutInflater inflater = ((Activity)context).getLayoutInflater();
+            row = inflater.inflate(layoutResourceId, parent, false);
 
-        if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.company_details, parent, false);
+            holder = new CompanyHolder();
+            holder.name = (TextView)row.findViewById(R.id.company_name);
+            holder.email = (TextView)row.findViewById(R.id.company_email);
+            holder.web = (TextView)row.findViewById(R.id.company_web);
+
+            row.setTag(holder);
+        }
+        else
+        {
+            holder = (CompanyHolder)row.getTag();
         }
 
+        Company company = data.get(position);
+        holder.name.setText(company.name);
+        holder.email.setText(company.email);
+        holder.web.setText(company.web);
 
-        TextView company_name = (TextView) convertView.findViewById(R.id.company_name);
-        TextView company_email = (TextView) convertView.findViewById(R.id.company_email);
-        TextView company_web = (TextView) convertView.findViewById(R.id.company_web);
 
-        company_name.setText(company.name);
-        company_email.setText(company.email);
-        company_web.setText(company.web);
-
-        return convertView;
-    }
-/*
-    ArrayList<Company> companyList;
-    LayoutInflater vi;
-    int Resource;
-    ViewHolder holder;
-
-    public CompanyAdapter(Context context, int resource, ArrayList<Company> objects) {
-        super(context, resource, objects);
-        vi = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        Resource = resource;
-        companyList = objects;
+        return row;
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View v = convertView;
-        if (v == null) {
-            holder = new ViewHolder();
-            v = vi.inflate(Resource, null);
-
-            holder.company_name = (TextView) v.findViewById(R.id.company_name);
-            holder.company_email = (TextView) v.findViewById(R.id.company_email);
-            holder.company_web = (TextView) v.findViewById(R.id.company_web);
-
-            v.setTag(holder);
-        } else {
-            holder = (ViewHolder) v.getTag();
-        }
-
-        holder.company_name.setText(companyList.get(position).getName());
-        holder.company_email.setText(companyList.get(position).getEmail());
-        holder.company_web.setText("Web: " + companyList.get(position).getWeb());
-        return v;
-
+    static class CompanyHolder
+    {
+        TextView name;
+        TextView email;
+        TextView web;
     }
-    static class ViewHolder {
-        public TextView company_name;
-        public TextView company_email;
-        public TextView company_web;
-
-    }
-*/
 }

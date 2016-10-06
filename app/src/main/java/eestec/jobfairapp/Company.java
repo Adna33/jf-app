@@ -10,12 +10,13 @@ public class Company {
     String web;
 
     public Company(String name, String email, String web) {
+        super();
         this.name = name;
         this.email = email;
         this.web = web;
     }
 
-    public Company() {}
+    public Company() { super(); }
 
     public String getName() {
         return name;
