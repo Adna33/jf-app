@@ -76,8 +76,6 @@ public class CompaniesActivity extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(getApplicationContext(), "IN", Toast.LENGTH_LONG).show();
-
     }
 
 
