@@ -51,7 +51,6 @@ public class CompaniesActivity extends AppCompatActivity {
         }
 
         companyList = new ArrayList<Company>();
-        companyList.add(new Company("Atlant","bbbb","heheh"));
         new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
 
         list = (ListView)findViewById(R.id.listView);

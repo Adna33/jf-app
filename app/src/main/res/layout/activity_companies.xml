@@ -7,6 +7,28 @@
     android:background="#FFFFFF"
     tools:context="eestec.jobfairapp.CompaniesActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/api_logo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton6"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/infobip_logo" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
