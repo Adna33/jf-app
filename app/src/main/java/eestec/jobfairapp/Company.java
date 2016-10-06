@@ -15,6 +15,10 @@ public class Company {
         this.email = email;
         this.web = web;
     }
+    public Company(String name) {
+        super();
+        this.name = name;
+    }
 
     public Company() { super(); }
 

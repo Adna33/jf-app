@@ -35,8 +35,8 @@ public class CompanyAdapter extends ArrayAdapter<Company>{
 
             holder = new CompanyHolder();
             holder.name = (TextView)row.findViewById(R.id.company_name);
-            holder.email = (TextView)row.findViewById(R.id.company_email);
-            holder.web = (TextView)row.findViewById(R.id.company_web);
+           // holder.email = (TextView)row.findViewById(R.id.company_email);
+            //holder.web = (TextView)row.findViewById(R.id.company_web);
 
             row.setTag(holder);
         }
@@ -47,8 +47,8 @@ public class CompanyAdapter extends ArrayAdapter<Company>{
 
         Company company = data.get(position);
         holder.name.setText(company.name);
-        holder.email.setText(company.email);
-        holder.web.setText(company.web);
+        //holder.email.setText(company.email);
+        //holder.web.setText(company.web);
 
 
         return row;
@@ -57,7 +57,7 @@ public class CompanyAdapter extends ArrayAdapter<Company>{
     static class CompanyHolder
     {
         TextView name;
-        TextView email;
-        TextView web;
+        //TextView email;
+        //TextView web;
     }
 }

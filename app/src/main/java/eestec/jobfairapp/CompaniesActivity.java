@@ -51,8 +51,9 @@ public class CompaniesActivity extends AppCompatActivity {
         }
 
         companyList = new ArrayList<Company>();
-        companyList.add(new Company("atlant","bbbb","heheh"));
+        companyList.add(new Company("Atlant","bbbb","heheh"));
         new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
+
         list = (ListView)findViewById(R.id.listView);
         adapter = new CompanyAdapter(this, R.layout.company_details, companyList);
         list.setAdapter(adapter);
@@ -104,8 +105,8 @@ public class CompaniesActivity extends AppCompatActivity {
                     Company company = new Company();
 
                     company.setName(object.getString("name"));
-                    company.setEmail(object.getString("email"));
-                    company.setWeb(object.getString("web"));
+                   // company.setEmail(object.getString("email"));
+                   // company.setWeb(object.getString("web"));
 
                    companyList.add(company);
 

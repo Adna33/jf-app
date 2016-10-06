@@ -10,7 +10,10 @@
         android:id="@+id/company_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ime kompanije" />
+        android:text="Ime kompanije"
+        android:textSize="25dp"
+        android:textStyle="bold|italic" />
+    <!--
     <TextView
         android:id="@+id/company_email"
         android:layout_width="wrap_content"
@@ -21,5 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Web" />
+        -->
 
 </LinearLayout>
