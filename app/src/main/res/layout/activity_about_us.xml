@@ -26,15 +26,15 @@
                 android:layout_width="250dp"
                 android:layout_height="97dp"
                 android:id="@+id/imageView2"
-                android:src="@drawable/white_jf"
+                android:src="@drawable/jf_logo_white"
                 android:layout_gravity="left|center_horizontal"
-                android:layout_alignParentLeft="true"/>
+                android:layout_alignParentLeft="true" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="97dp"
                 android:id="@+id/eestecLogo"
-                android:src="@drawable/eestec_logo"
+                android:src="@drawable/eestec_logo_white"
                 android:scaleType="fitCenter"
                 android:layout_toRightOf="@+id/imageView2"
                 android:layout_gravity="top|right"
