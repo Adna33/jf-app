@@ -17,6 +17,14 @@ public class MainActivity extends AppCompatActivity{
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
+        ImageButton imgBtn0 = (ImageButton) findViewById(R.id.imageButton0);
+        imgBtn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NewsActivity.class));
+            }
+        });
+
         ImageButton imgBtn1 = (ImageButton) findViewById(R.id.imageButton);
         imgBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
