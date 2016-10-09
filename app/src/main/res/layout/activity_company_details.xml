@@ -9,11 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="eestec.jobfairapp.CompanyDetailsActivity"
     android:background="#fafafa">
-
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <ImageView
             android:layout_width="wrap_content"
@@ -98,6 +104,8 @@
             android:text="Medium Text"
             android:id="@+id/tv_telefon" />
 
+
     </LinearLayout>
+</ScrollView>
 
 </RelativeLayout>

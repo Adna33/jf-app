@@ -117,8 +117,11 @@ public class CompaniesActivity extends AppCompatActivity {
                     Company company = new Company();
                     company.setId(object.getInt("id"));
                     company.setName(object.getString("name"));
+                    company.setOkupacija(object.getString("occupation"));
                     company.setEmail(object.getString("email"));
                     company.setWeb(object.getString("web"));
+                    company.setAdresa(object.getString("address"));
+                    company.setTelefon(object.getString("phone"));
 
                    companyList.add(company);
 
