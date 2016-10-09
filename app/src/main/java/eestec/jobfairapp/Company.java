@@ -9,8 +9,25 @@ public class Company {
     String email;
     String web;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    int id;
+
     public Company(String name, String email, String web) {
         super();
+        this.name = name;
+        this.email = email;
+        this.web = web;
+    }
+    public Company(int id,String name, String email, String web) {
+        super();
+        this.id=id;
         this.name = name;
         this.email = email;
         this.web = web;

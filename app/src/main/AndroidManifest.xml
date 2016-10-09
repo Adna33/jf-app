@@ -12,11 +12,15 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/jf"
-        android:supportsRtl="true"
-        android:label="JobFAIR">
+        android:label="JobFAIR"
+        android:supportsRtl="true">
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme">
@@ -71,6 +75,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        </application>
+        <activity android:name=".CompanyDetailsActivity"></activity>
+    </application>
 
 </manifest>
