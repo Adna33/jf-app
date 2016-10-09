@@ -47,23 +47,25 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             int value=extras.getInt("COMPANY_CONTENT");
             ID=value;
             //tv1.setText(String.valueOf(value));
+            selectedCompany = new Company();
+            new CompanyAsyncTask().execute("http://api.jobfair.ba/api/kompanija/"+String.valueOf(ID));
+            TextView name = (TextView) findViewById(R.id.tv_company_name);
+            name.setText(selectedCompany.getName());
+            TextView occupation = (TextView) findViewById(R.id.tv_okupacija);
+            occupation.setText(selectedCompany.getOkupacija());
+            TextView web = (TextView) findViewById(R.id.tv_web);
+            web.setText(selectedCompany.getWeb());
+            TextView adresa = (TextView) findViewById(R.id.tv_adresa);
+            adresa.setText(selectedCompany.getAdresa());
+            TextView email = (TextView) findViewById(R.id.tv_mail);
+            email.setText(selectedCompany.getEmail());
+            TextView tel = (TextView) findViewById(R.id.tv_telefon);
+            tel.setText(selectedCompany.getTelefon());
 
         }
+        else Toast.makeText(getApplicationContext(), "Greska pri ucitavanju detalja", Toast.LENGTH_LONG).show();
 
-        selectedCompany = new Company();
-        new CompanyAsyncTask().execute("http://api.jobfair.ba/api/kompanija/"+String.valueOf(ID));
-        TextView name = (TextView) findViewById(R.id.tv_company_name);
-        name.setText(selectedCompany.getName());
-        TextView occupation = (TextView) findViewById(R.id.tv_okupacija);
-        occupation.setText(selectedCompany.getOkupacija());
-        TextView web = (TextView) findViewById(R.id.tv_web);
-        web.setText(selectedCompany.getWeb());
-        TextView adresa = (TextView) findViewById(R.id.tv_adresa);
-        adresa.setText(selectedCompany.getAdresa());
-        TextView email = (TextView) findViewById(R.id.tv_mail);
-        email.setText(selectedCompany.getEmail());
-        TextView tel = (TextView) findViewById(R.id.tv_telefon);
-        tel.setText(selectedCompany.getTelefon());
+
 
 
 
