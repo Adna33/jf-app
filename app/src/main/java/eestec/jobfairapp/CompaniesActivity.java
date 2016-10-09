@@ -63,7 +63,7 @@ public class CompaniesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long id) {
-                Intent myIntent = new Intent(arg1.getContext(), CompanyDetailsActivity.class);
+                Intent myIntent = new Intent(CompaniesActivity.this, CompanyDetailsActivity.class);
                 name = companyList.get(position).getName();
                 occupation = companyList.get(position).getOkupacija();
                 web = companyList.get(position).getWeb();
