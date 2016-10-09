@@ -49,6 +49,7 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             //tv1.setText(String.valueOf(value));
             selectedCompany = new Company();
             new CompanyAsyncTask().execute("http://api.jobfair.ba/api/kompanija/"+String.valueOf(ID));
+            if(selectedCompany!=null){
             TextView name = (TextView) findViewById(R.id.tv_company_name);
             name.setText(selectedCompany.getName());
             TextView occupation = (TextView) findViewById(R.id.tv_okupacija);
@@ -60,7 +61,8 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             TextView email = (TextView) findViewById(R.id.tv_mail);
             email.setText(selectedCompany.getEmail());
             TextView tel = (TextView) findViewById(R.id.tv_telefon);
-            tel.setText(selectedCompany.getTelefon());
+            tel.setText(selectedCompany.getTelefon());}
+            else Toast.makeText(getApplicationContext(), "Kompanija trenutno nema dodatne podatke", Toast.LENGTH_LONG).show();
 
         }
         else Toast.makeText(getApplicationContext(), "Greska pri ucitavanju detalja", Toast.LENGTH_LONG).show();
