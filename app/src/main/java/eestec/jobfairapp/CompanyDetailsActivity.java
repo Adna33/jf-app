@@ -39,7 +39,7 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
         }
-        ID=3;
+        ID=1;
 
         //get id selektovane kompanije
         Bundle extras = getIntent().getExtras();
@@ -48,7 +48,7 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             ID=value;
             //tv1.setText(String.valueOf(value));
             selectedCompany = new Company();
-            new CompanyAsyncTask().execute("http://api.jobfair.ba/api/kompanija/"+String.valueOf(ID));
+            new CompanyAsyncTask().execute("http://api.jobfair.ba/api/kompanija/"+ID);
             if(selectedCompany!=null){
             TextView name = (TextView) findViewById(R.id.tv_company_name);
             name.setText(selectedCompany.getName());
