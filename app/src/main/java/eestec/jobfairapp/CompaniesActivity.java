@@ -31,7 +31,12 @@ public class CompaniesActivity extends AppCompatActivity {
     ListView list;
     CompanyAdapter adapter;
     ArrayList<Company> companyList;
-    int idBroj;
+    String name;
+    String occupation;
+    String web;
+    String adresa;
+    String email;
+    String tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +63,20 @@ public class CompaniesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long id) {
-                Intent companyIntent = new Intent(CompaniesActivity.this, CompanyDetailsActivity.class);
-                //Proslijeđivanje id-a selektovane kompanije
-                idBroj = companyList.get(position).getId();
-                companyIntent.putExtra("COMPANY_CONTENT",idBroj);
-                //startActivityForResult(companyIntent, 0);
-                startActivity(companyIntent);
+                Intent myIntent = new Intent(arg1.getContext(), CompanyDetailsActivity.class);
+                name = companyList.get(position).getName();
+                occupation = companyList.get(position).getOkupacija();
+                web = companyList.get(position).getWeb();
+                adresa = companyList.get(position).getAdresa();
+                email = companyList.get(position).getEmail();
+                tel = companyList.get(position).getTelefon();
+                myIntent.putExtra("COMPANY_NAME",name);
+                myIntent.putExtra("COMPANY_OCC",occupation);
+                myIntent.putExtra("COMPANY_WEB",web);
+                myIntent.putExtra("COMPANY_ADRESS",adresa);
+                myIntent.putExtra("COMPANY_MAIL",email);
+                myIntent.putExtra("COMPANY_TEL",tel);
+                startActivityForResult(myIntent, 0);
             }
         });
 
