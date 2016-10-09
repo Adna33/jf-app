@@ -31,7 +31,7 @@ public class CompaniesActivity extends AppCompatActivity {
     ListView list;
     CompanyAdapter adapter;
     ArrayList<Company> companyList;
-    int id;
+    int idBroj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +58,12 @@ public class CompaniesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long id) {
-                Intent companyIntent = new Intent(arg1.getContext(), CompanyDetailsActivity.class);
+                Intent companyIntent = new Intent(CompaniesActivity.this, CompanyDetailsActivity.class);
                 //Proslijeđivanje id-a selektovane kompanije
-                id = companyList.get(position).getId();
-                companyIntent.putExtra("COMPANY_CONTENT",id);
-                startActivityForResult(companyIntent, 0);
+                idBroj = companyList.get(position).getId();
+                companyIntent.putExtra("COMPANY_CONTENT",idBroj);
+                //startActivityForResult(companyIntent, 0);
+                startActivity(companyIntent);
             }
         });
 

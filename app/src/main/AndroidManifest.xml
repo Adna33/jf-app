@@ -63,6 +63,10 @@
             android:name=".NewsDetailsActivity"
             android:label="@string/title_activity_newsdetails"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CompanyDetailsActivity"
+            android:label="@string/title_activity_company"
+            android:theme="@style/AppTheme" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -75,7 +79,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".CompanyDetailsActivity"></activity>
+
     </application>
 
 </manifest>
