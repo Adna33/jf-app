@@ -17,15 +17,16 @@ public class CompanyDetailsActivity extends AppCompatActivity {
 
         if (actionBar != null)
         {
-
-            actionBar.setDisplayHomeAsUpEnabled(true); //Set this to true if selecting "home" returns up by a single level in your UI rather than back to the top level or front page.
-            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
+            //omogucavanje back buttona
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
         }
         TextView tv1=(TextView) findViewById(R.id.tv_detalji_company);
+        //get id selektovane kompanije
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String value = extras.getString("COMPANY_CONTENT");
-            tv1.setText(value);
+            int value=extras.getInt("COMPANY_CONTENT");
+            tv1.setText(String.valueOf(value));
 
         }
     }
