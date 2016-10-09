@@ -8,16 +8,20 @@ public class Company {
     String name;
     String email;
     String web;
+    String adresa;
+    String telefon;
+    String okupacija;
+    int id;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
+    public Company(String name, String email, String web, String adresa, String telefon, String okupacija, int id) {
+        this.name = name;
+        this.email = email;
+        this.web = web;
+        this.adresa = adresa;
+        this.telefon = telefon;
+        this.okupacija = okupacija;
         this.id = id;
     }
-
-    int id;
 
     public Company(String name, String email, String web) {
         super();
@@ -62,4 +66,35 @@ public class Company {
     public void setWeb(String web) {
         this.web = web;
     }
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
+    }
+
+    public String getTelefon() {
+        return telefon;
+    }
+
+    public void setTelefon(String telefon) {
+        this.telefon = telefon;
+    }
+
+    public String getOkupacija() {
+        return okupacija;
+    }
+
+    public void setOkupacija(String okupacija) {
+        this.okupacija = okupacija;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
