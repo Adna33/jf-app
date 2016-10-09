@@ -35,6 +35,7 @@ public class CompanyAdapter extends ArrayAdapter<Company>{
 
             holder = new CompanyHolder();
             holder.name = (TextView)row.findViewById(R.id.company_name);
+
            // holder.email = (TextView)row.findViewById(R.id.company_email);
             //holder.web = (TextView)row.findViewById(R.id.company_web);
 

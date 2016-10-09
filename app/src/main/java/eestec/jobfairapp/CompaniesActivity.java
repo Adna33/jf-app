@@ -58,10 +58,11 @@ public class CompaniesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long id) {
-                Intent myIntent = new Intent(arg1.getContext(), NewsDetailsActivity.class);
+                Intent companyIntent = new Intent(arg1.getContext(), CompanyDetailsActivity.class);
+                //Proslijeđivanje id-a selektovane kompanije
                 id = companyList.get(position).getId();
-                myIntent.putExtra("COMPANY_CONTENT",id);
-                startActivityForResult(myIntent, 0);
+                companyIntent.putExtra("COMPANY_CONTENT",id);
+                startActivityForResult(companyIntent, 0);
             }
         });
 
@@ -101,10 +102,9 @@ public class CompaniesActivity extends AppCompatActivity {
 
                     Company company = new Company();
                     company.setId(object.getInt("id"));
-
                     company.setName(object.getString("name"));
                     company.setEmail(object.getString("email"));
-                   company.setWeb(object.getString("web"));
+                    company.setWeb(object.getString("web"));
 
                    companyList.add(company);
 
