@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class CompanyDetailsActivity extends AppCompatActivity {
 
+    int ID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             int value=extras.getInt("COMPANY_CONTENT");
+            ID=value;
             tv1.setText(String.valueOf(value));
 
         }
