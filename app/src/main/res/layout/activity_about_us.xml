@@ -61,7 +61,9 @@
                 android:gravity="center"
                 android:text="@string/JobFARIR_text"
                 android:background="#646566"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp" />
         </ScrollView>
         </LinearLayout>
 
