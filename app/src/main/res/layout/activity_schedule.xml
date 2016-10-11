@@ -5,37 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="#646566"
     tools:context="eestec.jobfairapp.ScheduleActivity"
-    android:background="@color/white">
+   >
 
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ViewSwitcher
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/plan"
-        android:background="#c7c7c7">
+        android:id="@+id/viewSwitcher" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/img_plan"
-            android:src="@drawable/tlocrt_test"
-            android:scaleType="fitXY" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/schedule"
-        android:background="#c7c7c7">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/img_schedule"
-            android:src="@drawable/jf_raspored_test"
-            android:layout_marginTop="5dp" />
-    </LinearLayout>
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/tv_switch"
+        android:layout_gravity="center_horizontal"
+        android:gravity="bottom" />
 </LinearLayout>

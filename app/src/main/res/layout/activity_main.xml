@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true"
-    android:background="@color/eestecRed">
-<LinearLayout
-
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-
     android:background="@color/eestecRed"
     android:orientation="vertical"
     android:layout_gravity="center">
@@ -23,82 +17,89 @@
         android:id="@+id/imageView"
         android:src="@drawable/white_jf"
         android:scaleType="centerInside"/>
-
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageButton
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageButton0"
-            android:src="@drawable/ic_news_iv"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:background="@drawable/border_top"
-            />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageButton0"
+                android:src="@drawable/ic_news_iv"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:background="@drawable/border_top"
+                />
+        </LinearLayout>
 
-        <ImageButton
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageButton"
-            android:src="@drawable/ic_info_iv"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:background="@drawable/border_top_bottom_info"
-            />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageButton"
+                android:src="@drawable/ic_info_iv"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:background="@drawable/border_top_bottom_info"
+                />
+        </LinearLayout>
 
-        <ImageButton
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageButton4"
-            android:src="@drawable/ic_kompanije_iv"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:background="@drawable/border_bottom" />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageButton4"
+                android:src="@drawable/ic_kompanije_iv"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:background="@drawable/border_bottom" />
+        </LinearLayout>
 
-        <ImageButton
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageButton2"
-            android:src="@drawable/ic_raspored_iv"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:background="#C91619" />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/ic_raspored_iv"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:background="#C91619" />
+        </LinearLayout>
 
-        <ImageButton
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/imageButton3"
-            android:src="@drawable/ic_mapa_iv"
-            android:scaleType="fitStart"
-            android:background="@drawable/borders" />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/imageButton3"
+                android:src="@drawable/ic_mapa_iv"
+                android:scaleType="fitStart"
+                android:background="@drawable/borders" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
-</ScrollView>

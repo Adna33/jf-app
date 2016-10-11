@@ -23,7 +23,7 @@
             android:background="#646566">
 
             <ImageView
-                android:layout_width="250dp"
+                android:layout_width="220dp"
                 android:layout_height="97dp"
                 android:id="@+id/imageView2"
                 android:src="@drawable/white_jf"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="97dp"
                 android:id="@+id/eestecLogo"
-                android:src="@drawable/eestec_logo_white"
+                android:src="@drawable/eestec_logo"
                 android:scaleType="fitCenter"
                 android:layout_toRightOf="@+id/imageView2"
                 android:layout_gravity="top|right"
@@ -46,7 +46,9 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
         <ScrollView
             android:id="@+id/scroller"
             android:layout_width="fill_parent"
@@ -61,9 +63,7 @@
                 android:gravity="center"
                 android:text="@string/JobFARIR_text"
                 android:background="#646566"
-                android:textColor="@color/white"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp" />
+                android:textColor="@color/white" />
         </ScrollView>
         </LinearLayout>
 
