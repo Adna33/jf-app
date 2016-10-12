@@ -60,6 +60,8 @@ public class NewsActivity extends AppCompatActivity {
                     content = newsList.get(position).getContent();
                     myIntent.putExtra("NEWS_CONTENT",content);
                     startActivityForResult(myIntent, 0);
+
+
                 }
 
         });
