@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -23,11 +24,12 @@ public class NewsDetailsActivity extends AppCompatActivity {
         if (actionBar != null)
         {
 
-            actionBar.setDisplayHomeAsUpEnabled(true); //Set this to true if selecting "home" returns up by a single level in your UI rather than back to the top level or front page.
-            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
         }
 
         TextView content = (TextView) findViewById(R.id.newsContent);
+        ImageView image = (ImageView) findViewById(R.id.news_image) ;
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String value = extras.getString("NEWS_CONTENT");

@@ -5,8 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#646566"
-    >
+    android:background="@color/eestecdarkGrey">
+
+    <TextView
+        android:id="@+id/news_details_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Novost"
+        android:textSize="25dp"
+        android:textColor="@color/eestecTitle"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/news_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,10 +28,11 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#646566"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:background="@color/eestecGrey">
+
         <ScrollView
             android:id="@+id/scroller"
             android:layout_width="fill_parent"
@@ -26,11 +41,12 @@
             android:fillViewport="true">
         <TextView
             android:id="@+id/newsContent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Opis novosti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalji"
+            android:textSize="15dp"
             android:textColor="@color/white"
-            android:textSize="17dp"/>
+            android:padding="4dp"/>
         </ScrollView>
     </LinearLayout>
 

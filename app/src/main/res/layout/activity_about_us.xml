@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="eestec.jobfairapp.AboutUsActivity">
+    tools:context="eestec.jobfairapp.AboutUsActivity"
+    android:background="@color/eestecdarkGrey">
 
 
     <LinearLayout
@@ -13,14 +14,13 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#646566">
+        >
 
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/informationLayout"
-            android:background="#646566">
+            android:id="@+id/informationLayout">
 
             <ImageView
                 android:layout_width="220dp"
@@ -39,7 +39,7 @@
                 android:layout_toRightOf="@+id/imageView2"
                 android:layout_gravity="top|right"
                 android:layout_alignParentRight="true"
-                android:background="#646566"/>
+                android:background="@color/eestecdarkGrey"/>
 
         </RelativeLayout>
 
@@ -48,7 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="5dp"
+            android:background="@color/eestecGrey">
         <ScrollView
             android:id="@+id/scroller"
             android:layout_width="fill_parent"
@@ -59,10 +60,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/textView"
-                android:textSize="17dp"
+                android:textSize="15dp"
                 android:gravity="center"
                 android:text="@string/JobFARIR_text"
-                android:background="#646566"
                 android:textColor="@color/white" />
         </ScrollView>
         </LinearLayout>

@@ -31,6 +31,7 @@ public class NewsActivity extends AppCompatActivity {
     NewsAdapter adapter;
     ArrayList<News> newsList;
     String content;
+    String title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +59,9 @@ public class NewsActivity extends AppCompatActivity {
 
                     Intent myIntent = new Intent(view.getContext(), NewsDetailsActivity.class);
                     content = newsList.get(position).getContent();
+                    title = newsList.get(position).getName();
                     myIntent.putExtra("NEWS_CONTENT",content);
+                    myIntent.putExtra("NEWS_TITLE",title);
                     startActivityForResult(myIntent, 0);
 
 
