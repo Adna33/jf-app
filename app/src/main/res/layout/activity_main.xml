@@ -84,7 +84,7 @@
                 android:src="@drawable/ic_raspored_iv"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
-                android:background="#C91619" />
+                android:background="#AB0000" />
         </LinearLayout>
 
         <LinearLayout
