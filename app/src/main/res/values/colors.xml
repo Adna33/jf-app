@@ -10,4 +10,7 @@
     <color name="yellow"> #d5a246</color>
     <color name="lightGreen">#b0b747</color>
     <color name="darkGreen">#84b451</color>
+    <color name="eestecdarkGrey">#18191a</color>
+    <color name="eestecGrey">#272829</color>
+    <color name="eestecTitle">#d92528</color>
 </resources>
