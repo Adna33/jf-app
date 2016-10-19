@@ -31,6 +31,7 @@ public class NewsActivity extends AppCompatActivity {
     NewsAdapter adapter;
     ArrayList<News> newsList;
     String content;
+    String newsId;
     String title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +61,10 @@ public class NewsActivity extends AppCompatActivity {
                     Intent myIntent = new Intent(view.getContext(), NewsDetailsActivity.class);
                     content = newsList.get(position).getContent();
                     title = newsList.get(position).getName();
+                     newsId= newsList.get(position).getId();
                     myIntent.putExtra("NEWS_CONTENT",content);
                     myIntent.putExtra("NEWS_TITLE",title);
+                    myIntent.putExtra("NEWS_ID",newsId);
                     startActivityForResult(myIntent, 0);
 
 
@@ -102,7 +105,7 @@ public class NewsActivity extends AppCompatActivity {
                     JSONObject object = companies.getJSONObject(i);
 
                     News news = new News();
-
+                    news.setId(object.getString("id"));
                     news.setName(object.getString("naslov"));
                     news.setDescription(object.getString("opis"));
                     news.setContent(object.getString("sadrzaj"));

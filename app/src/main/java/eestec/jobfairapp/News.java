@@ -12,6 +12,16 @@ public class News {
     String content;
     Bitmap image;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+   String id;
+
     public Bitmap getImage() {
         return image;
     }
