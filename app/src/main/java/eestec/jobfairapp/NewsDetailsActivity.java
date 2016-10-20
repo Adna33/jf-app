@@ -52,6 +52,7 @@ public class NewsDetailsActivity extends AppCompatActivity {
 
         ImageView image = (ImageView) findViewById(R.id.news_image) ;
         Bundle extras = getIntent().getExtras();
+
         if (extras != null) {
             String value = extras.getString("NEWS_CONTENT");
             newsId=extras.getString("NEWS_ID");
@@ -61,35 +62,14 @@ public class NewsDetailsActivity extends AppCompatActivity {
 
 
         }
-         new LoadImageTask(image).execute("http://api.jobfair.ba/static/news/t_2.jpg");
 
-       // new ImageAsyncTask().execute("http://api.jobfair.ba/static/news/t_2.jpg");
-        //new LoadImageTask(NewsDetailsActivity.getApplicationContext()).execute("http://api.jobfair.ba/static/news/t_2.jpg");
+        if(newsId!=null)
+         new LoadImageTask(image).execute("http://api.jobfair.ba/static/news/t_"+newsId+".jpg");
+       // else
+         //   new LoadImageTask(image).execute("http://api.jobfair.ba/static/news/t_2.jpg");
+
 
     }
-
-    /*public class ImageAsyncTask extends AsyncTask<String, Void, Boolean> {
-
-
-        @Override
-        protected Boolean doInBackground(String... params) {
-            try {
-
-                thumb = BitmapFactory.decodeStream((InputStream)new URL(params[0]).getContent());
-                return true;
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-            return false;
-        }
-        @Override
-        protected void onPostExecute(Boolean result) {
-            if(result == false)
-                Toast.makeText(getApplicationContext(), "Nije moguće učitati podatke", Toast.LENGTH_LONG).show();
-
-        }}*/
-
 
         @Override
     public boolean onOptionsItemSelected(MenuItem item) {
