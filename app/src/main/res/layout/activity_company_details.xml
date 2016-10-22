@@ -25,6 +25,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:padding="3dp"
+            android:adjustViewBounds="true"
             android:id="@+id/iv_company_logo"
             android:src="@drawable/company_overview" />
 
@@ -34,6 +37,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Naziv Kompanije"
             android:id="@+id/tv_company_name"
+            android:textSize="25dp"
             android:textColor="@color/eestecTitle"/>
 
         <TextView
