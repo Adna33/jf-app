@@ -10,36 +10,66 @@
    >
 
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        >
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/imageView3"
+            android:id="@+id/raspored"
             android:src="@drawable/jf_raspored_test"
             android:scaleType="fitXY"
-            android:alpha="0.5"
-            android:layout_margin="5dp" />
-    </LinearLayout>
+            android:alpha="0.4"
+            android:layout_margin="2dp" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Raspored Sajma"
+            android:layout_alignLeft="@id/raspored"
+            android:layout_alignTop="@id/raspored"
+            android:layout_alignRight="@id/raspored"
+            android:layout_alignBottom="@id/raspored"
+            android:layout_margin="1dp"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/imageView4"
+            android:id="@+id/skica"
             android:src="@drawable/tlocrt_test"
             android:scaleType="centerCrop"
-            android:alpha="0.5"
-            android:layout_margin="5dp" />
-    </LinearLayout>
+            android:alpha="0.4"
+            android:layout_margin="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skica Sajma"
+            android:id="@+id/textView7"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignLeft="@id/skica"
+            android:layout_alignTop="@id/skica"
+            android:layout_alignRight="@id/skica"
+            android:layout_alignBottom="@id/skica"
+            android:layout_margin="1dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
 </LinearLayout>
