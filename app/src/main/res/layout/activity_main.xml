@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/white_jf"
+        android:background="@drawable/border_jobfair"
         android:scaleType="centerInside"/>
     <ScrollView
         android:layout_width="wrap_content"
