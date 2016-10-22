@@ -9,7 +9,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/iv_raspored"
+        android:id="@+id/iv_tlocrt"
         android:src="@drawable/tlocrt_test" />
 
 </RelativeLayout>
