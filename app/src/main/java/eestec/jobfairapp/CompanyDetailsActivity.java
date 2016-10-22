@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,10 +35,10 @@ public class CompanyDetailsActivity extends AppCompatActivity {
 
         if (actionBar != null)
         {
-            //omogucavanje back buttona
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
         }
+
         TextView tv_name = (TextView) findViewById(R.id.tv_company_name);
         TextView tv_occupation = (TextView) findViewById(R.id.tv_okupacija);
         TextView tv_web = (TextView) findViewById(R.id.tv_web);
@@ -45,6 +46,9 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         TextView tv_email = (TextView) findViewById(R.id.tv_mail);
         TextView tv_tel = (TextView) findViewById(R.id.tv_telefon);
         Bundle extras = getIntent().getExtras();
+
+        String logo ="";
+
         if (extras != null) {
             String name = extras.getString("COMPANY_NAME");
             String occupation = extras.getString("COMPANY_OCC");
@@ -52,20 +56,24 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             String adresa = extras.getString("COMPANY_ADRESS");
             String email = extras.getString("COMPANY_MAIL");
             String tel = extras.getString("COMPANY_TEL");
+            logo = extras.getString("COMPANY_LOGO");
 
             tv_name.setText(name);
             tv_occupation.setText(occupation);
             tv_web.setText(web);
             tv_adresa.setText(adresa);
             tv_email.setText(email);
-            tv_tel.setText(tel);}
-            else Toast.makeText(getApplicationContext(), "Kompanija trenutno nema dodatne podatke", Toast.LENGTH_LONG).show();
+            tv_tel.setText(tel);
+
+        }
+
+        else Toast.makeText(getApplicationContext(), "Kompanija trenutno nema dodatne podatke", Toast.LENGTH_LONG).show();
 
 
+        ImageView image = (ImageView) findViewById(R.id.iv_company_logo) ;
+        new LoadImageTask(image).execute(logo);
 
     }
-
-
 
 
     @Override

@@ -2,20 +2,24 @@ package eestec.jobfairapp;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -28,15 +32,19 @@ import java.util.ArrayList;
  */
 public class CompaniesActivity extends AppCompatActivity {
 
-    ListView list;
+    ArrayList<Company> arrayList;
+    ListView lv;
+    Integer id;
+    String imageUrl;
     CompanyAdapter adapter;
-    ArrayList<Company> companyList;
+
     String name;
     String occupation;
     String web;
     String adresa;
     String email;
     String tel;
+    String logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,37 +59,46 @@ public class CompaniesActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
         }
 
-        companyList = new ArrayList<Company>();
-        new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
+        arrayList = new ArrayList<>();
+        lv = (ListView) findViewById(R.id.listView);
 
-        list = (ListView)findViewById(R.id.listView);
-        adapter = new CompanyAdapter(this, R.layout.company_details, companyList);
-        list.setAdapter(adapter);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
+            }
+        });
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        adapter = new CompanyAdapter(
+                getApplicationContext(), R.layout.company_details, arrayList);
+        lv.setAdapter(adapter);
+
+
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long id) {
                 Intent myIntent = new Intent(CompaniesActivity.this, CompanyDetailsActivity.class);
-                name = companyList.get(position).getName();
-                occupation = companyList.get(position).getOkupacija();
-                web = companyList.get(position).getWeb();
-                adresa = companyList.get(position).getAdresa();
-                email = companyList.get(position).getEmail();
-                tel = companyList.get(position).getTelefon();
+                name = arrayList.get(position).getName();
+                occupation = arrayList.get(position).getOkupacija();
+                web = arrayList.get(position).getWeb();
+                adresa = arrayList.get(position).getAdresa();
+                email = arrayList.get(position).getEmail();
+                tel = arrayList.get(position).getTelefon();
+                logo = arrayList.get(position).getImage();
                 myIntent.putExtra("COMPANY_NAME",name);
                 myIntent.putExtra("COMPANY_OCC",occupation);
                 myIntent.putExtra("COMPANY_WEB",web);
                 myIntent.putExtra("COMPANY_ADRESS",adresa);
                 myIntent.putExtra("COMPANY_MAIL",email);
                 myIntent.putExtra("COMPANY_TEL",tel);
+                myIntent.putExtra("COMPANY_LOGO", logo);
                 startActivityForResult(myIntent, 0);
             }
         });
-
     }
-
 
     public class CompaniesAsyncTask extends AsyncTask<String, Void, Boolean>{
 
@@ -107,7 +124,6 @@ public class CompaniesActivity extends AppCompatActivity {
                 }
                 result = sb.toString();
 
-                //InputStream in = new BufferedInputStream(connection.getInputStream());
                 JSONArray companies = new JSONArray(result);
 
 
@@ -123,15 +139,21 @@ public class CompaniesActivity extends AppCompatActivity {
                     company.setAdresa(object.getString("address"));
                     company.setTelefon(object.getString("phone"));
 
-                   companyList.add(company);
+                    arrayList.add(company);
+
+                    id = company.getId();
+                    imageUrl = "http://api.jobfair.ba/static/kompanije/" + id.toString() + ".png";
+                    company.setImage(imageUrl);
+
+
 
                 }
 
                 return true;
             }
-        catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+            catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
             return false;
@@ -161,5 +183,6 @@ public class CompaniesActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 }

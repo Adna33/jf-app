@@ -12,26 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent">
 
-        <ImageButton
+
+        <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton5"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:src="@drawable/api_logo" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton6"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:src="@drawable/infobip_logo" />
-
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:id="@+id/listView" />
       </LinearLayout>
 
 </LinearLayout>

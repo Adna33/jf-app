@@ -1,64 +1,47 @@
 package eestec.jobfairapp;
 
+import com.squareup.picasso.Picasso;
+
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
-import java.util.List;
-public class CompanyAdapter extends ArrayAdapter<Company>{
 
+public class CompanyAdapter extends ArrayAdapter<Company> {
+
+    ArrayList<Company> companies;
     Context context;
-    int layoutResourceId;
-    ArrayList<Company> data = null;
+    int resource;
 
-    public CompanyAdapter(Context context, int layoutResourceId, ArrayList<Company> data) {
-        super(context, layoutResourceId, data);
-        this.layoutResourceId = layoutResourceId;
+    public CompanyAdapter(Context context, int resource, ArrayList<Company> companies) {
+        super(context, resource, companies);
+        this.companies = companies;
         this.context = context;
-        this.data = data;
+        this.resource = resource;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View row = convertView;
-        CompanyHolder holder = null;
 
-        if(row == null)
-        {
-            LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-            row = inflater.inflate(layoutResourceId, parent, false);
+        if (convertView == null){
+            LayoutInflater layoutInflater = (LayoutInflater) getContext()
+                    .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+            convertView = layoutInflater.inflate(R.layout.company_details, null, true);
 
-            holder = new CompanyHolder();
-            holder.name = (TextView)row.findViewById(R.id.company_name);
-
-           // holder.email = (TextView)row.findViewById(R.id.company_email);
-            //holder.web = (TextView)row.findViewById(R.id.company_web);
-
-            row.setTag(holder);
         }
-        else
-        {
-            holder = (CompanyHolder)row.getTag();
-        }
+        Company company = getItem(position);
 
-        Company company = data.get(position);
-        holder.name.setText(company.name);
-        //holder.email.setText(company.email);
-        //holder.web.setText(company.web);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.company_logo);
+        Picasso.with(context).load(company.getImage()).into(imageView);
 
+        TextView txtName = (TextView) convertView.findViewById(R.id.txtCompany);
+        txtName.setText(company.name);
 
-        return row;
-    }
-
-    static class CompanyHolder
-    {
-        TextView name;
-        //TextView email;
-        //TextView web;
+        return convertView;
     }
 }

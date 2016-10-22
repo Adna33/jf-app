@@ -2,28 +2,31 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/company_name"
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:src="@drawable/jf_logo"/>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ime kompanije"
-        android:textSize="25dp"
-        android:textStyle="bold|italic" />
-    <!--
-    <TextView
-        android:id="@+id/company_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email adresa" />
-    <TextView
-        android:id="@+id/company_web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Web" />
-        -->
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="#c60a0a"
+            android:text="Company name"/>
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
