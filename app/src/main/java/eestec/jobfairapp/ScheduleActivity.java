@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,12 +22,14 @@ import android.widget.ViewSwitcher;
  * Created by XMAN on 13.9.2016.
  */
 public class ScheduleActivity extends AppCompatActivity {
-  
+
 
     int[] resources = {
             R.drawable.tlocrt_test,
             R.drawable.jf_raspored_test
     };
+    ImageButton raspored;
+    ImageButton skica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,21 @@ public class ScheduleActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true); //Set this to true if selecting "home" returns up by a single level in your UI rather than back to the top level or front page.
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
         }
+        raspored=(ImageButton)findViewById(R.id.raspored);
+        skica=(ImageButton)findViewById(R.id.skica);
+        raspored.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ScheduleActivity.this, ScheduleImageActivity.class));
+            }
+        });
+        skica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ScheduleActivity.this, ScheduleImageActivity.class));
+            }
+        });
+
 
 
     }
