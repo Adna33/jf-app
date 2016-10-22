@@ -38,7 +38,8 @@
             android:text="Naziv Kompanije"
             android:id="@+id/tv_company_name"
             android:textSize="25dp"
-            android:textColor="@color/eestecTitle"/>
+            android:textColor="@color/eestecTitle"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
