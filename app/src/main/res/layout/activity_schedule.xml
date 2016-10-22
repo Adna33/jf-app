@@ -37,7 +37,11 @@
             android:layout_alignRight="@id/raspored"
             android:layout_alignBottom="@id/raspored"
             android:layout_margin="1dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:shadowColor="@color/eestecdarkGrey"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -67,7 +71,11 @@
             android:layout_alignRight="@id/skica"
             android:layout_alignBottom="@id/skica"
             android:layout_margin="1dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:shadowColor="@color/eestecdarkGrey"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
 
     </RelativeLayout>
 
