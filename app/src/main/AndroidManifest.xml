@@ -67,6 +67,15 @@
             android:name=".CompanyDetailsActivity"
             android:label="@string/title_activity_company"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ScheduleImageActivity"
+            android:label="@string/title_activity_schedule_image"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".PlanImageActivity"
+            android:label="@string/title_activity_plan_image"
+            android:theme="@style/AppTheme"
+            ></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -79,8 +88,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".ScheduleImageActivity" />
-        <activity android:name=".PlanImageActivity"></activity>
+
     </application>
 
 </manifest>

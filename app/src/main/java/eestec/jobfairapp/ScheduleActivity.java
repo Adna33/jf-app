@@ -54,7 +54,7 @@ public class ScheduleActivity extends AppCompatActivity {
         skica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ScheduleActivity.this, ScheduleImageActivity.class));
+                startActivity(new Intent(ScheduleActivity.this, PlanImageActivity.class));
             }
         });
 
