@@ -22,9 +22,7 @@ public class SplashScreen extends AppCompatActivity {
 
 
         final ImageView iv= (ImageView) findViewById(R.id.splashcircle);
-        final ImageView iv2= (ImageView) findViewById(R.id.jflogo);
         final Animation an = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
-       // final Animation an2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.abc_fade_out);
 
 
         iv.startAnimation(an);
@@ -37,7 +35,6 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 iv.startAnimation(an);
-               // iv2.startAnimation(an2);
 
                 finish();
                 Intent i= new Intent(SplashScreen.this,MainActivity.class);

@@ -1,54 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/eestecdarkGrey">
 
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="150dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:background="@color/eestecdarkGrey">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/api"
-                />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/microsoft"
-                />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/infobip"
-                />
-        </LinearLayout>
-    </HorizontalScrollView>
-
-
-
-
-     <LinearLayout
+    <LinearLayout
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_marginTop="5dp"
+         android:layout_margin="5dp"
          android:background="@color/eestecdarkGrey">
 
          <ImageView
