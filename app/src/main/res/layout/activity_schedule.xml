@@ -33,7 +33,7 @@
             android:textSize="25dp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:text="Raspored Sajma"
+            android:text="Raspored sajma"
             android:layout_alignLeft="@id/raspored"
             android:layout_alignTop="@id/raspored"
             android:layout_alignRight="@id/raspored"
@@ -63,7 +63,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Skica Sajma"
+            android:text="Skica sajma"
             android:id="@+id/textView7"
             android:textSize="25dp"
             android:textColor="@color/white"
