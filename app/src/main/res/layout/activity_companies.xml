@@ -6,6 +6,26 @@
     android:layout_height="match_parent"
     tools:context="eestec.jobfairapp.CompaniesActivity"
     android:background="@color/eestecdarkGrey">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eestecdarkRed"
+            android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GENERALNI GODIŠNJI PARTNERI"
+                    android:id="@+id/textView8"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="23dp"
+
+                    android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="150dp">
@@ -43,6 +63,24 @@
                             />
                 </LinearLayout>
         </HorizontalScrollView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eestecdarkRed">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UČESNICI SAJMA"
+                    android:id="@+id/textView9"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="23dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+        </LinearLayout>
+
 
         <ListView
             android:layout_width="wrap_content"
