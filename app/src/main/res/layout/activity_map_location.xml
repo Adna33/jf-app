@@ -9,42 +9,101 @@
     android:background="@color/eestecdarkGrey">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="185dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/location"
-            android:id="@+id/location" />
+            android:id="@+id/location"
+            android:adjustViewBounds="true" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/eestecTitle">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nalazimo se u kampusu Univerziteta u Sarajevu."
-            android:textSize="17dp"
-            android:textColor="@color/white"/>
-
+            android:text="Ovdje ide adresa"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="#ISKORISTISVOJUŠANSU"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:fontFamily="cursive"
-            android:textSize="20sp"
-            android:textColor="@color/eestecTitle"
-            android:layout_gravity="bottom|center"
-            android:textStyle="bold" />
+            android:text="Kontakt telefon ili nesto"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#IskoristiSvojuŠansu"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eestecdarkRed"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pronađite nas"
+                android:id="@+id/textView8"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="23dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="76dp"
+                android:layout_height="61dp"
+                android:id="@+id/facebook"
+                android:src="@drawable/facebook"
+                android:background="none"
+                android:scaleType="fitXY" />
+            <ImageButton
+                android:layout_width="76dp"
+                android:layout_height="61dp"
+                android:id="@+id/imageButton5"
+                android:src="@drawable/jficon"
+                android:background="none"
+                android:scaleType="fitXY"
+                android:tint="@color/white" />
+            <ImageButton
+
+                android:layout_height="62dp"
+                android:id="@+id/eestec"
+                android:src="@drawable/eestec_logo_white"
+                android:background="none"
+                android:scaleType="fitXY"
+                android:layout_width="110dp" />
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </LinearLayout>
