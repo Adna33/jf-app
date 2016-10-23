@@ -3,13 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+
     android:background="@color/eestecdarkGrey"
     tools:context="eestec.jobfairapp.PlanImageActivity">
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/iv_tlocrt"
-        android:src="@drawable/tlocrt_test" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_tlocrt"
+            android:src="@drawable/tlocrt_test"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:background="@color/eestecdarkGrey"
+            android:adjustViewBounds="false" />
+    </FrameLayout>
 
 </RelativeLayout>
