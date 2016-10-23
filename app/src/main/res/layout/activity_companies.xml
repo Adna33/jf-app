@@ -23,7 +23,8 @@
                     android:textStyle="bold"
                     android:textSize="23dp"
 
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center" />
         </LinearLayout>
 
         <HorizontalScrollView
