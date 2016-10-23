@@ -1,10 +1,13 @@
 package eestec.jobfairapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
@@ -14,7 +17,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  */
 
 public class MapLocationActivity extends AppCompatActivity {
-    ImageView mapa;
+    ImageView map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +30,36 @@ public class MapLocationActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
         }
-        mapa=(ImageView)findViewById(R.id.location);
-        PhotoViewAttacher photoView = new PhotoViewAttacher(mapa);
+        map=(ImageView)findViewById(R.id.location);
+        PhotoViewAttacher photoView = new PhotoViewAttacher(map);
         photoView.update();
+
+        ImageButton facebook = (ImageButton) findViewById(R.id.facebook);
+        facebook.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/JobfairIskoristiSvojuSansu"));
+                startActivity(i);
+            }
+        });
+
+        ImageButton jf = (ImageButton) findViewById(R.id.imageButton5);
+        jf.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://jobfair.ba/"));
+                startActivity(i);
+            }
+        });
+
+        ImageButton eestec = (ImageButton) findViewById(R.id.eestec);
+        eestec.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.eestec-sa.ba"));
+                startActivity(i);
+            }
+        });
     }
 
     @Override
