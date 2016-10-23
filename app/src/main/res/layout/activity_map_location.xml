@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="eestec.jobfairapp.MapLocationActivity"
+    android:background="@color/eestecdarkGrey">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="185dp"
+            android:src="@drawable/location"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nalazimo se u kampusu Univerziteta u Sarajevu."
+            android:textSize="17dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#ISKORISTISVOJUŠANSU"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:textColor="@color/eestecTitle"
+            android:layout_gravity="bottom|center" />
+    </LinearLayout>
+
+</LinearLayout>

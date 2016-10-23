@@ -63,6 +63,7 @@
             android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Web stranica:"
+            android:autoLink="web"
             android:id="@+id/web" />
 
         <TextView

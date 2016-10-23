@@ -28,8 +28,8 @@ public class ScheduleActivity extends AppCompatActivity {
             R.drawable.tlocrt_test,
             R.drawable.jf_raspored_test
     };
-    ImageButton raspored;
-    ImageButton skica;
+    ImageButton schedule;
+    ImageButton plan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +43,16 @@ public class ScheduleActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true); //Set this to true if selecting "home" returns up by a single level in your UI rather than back to the top level or front page.
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
         }
-        raspored=(ImageButton)findViewById(R.id.raspored);
-        skica=(ImageButton)findViewById(R.id.skica);
-        raspored.setOnClickListener(new View.OnClickListener() {
+        schedule=(ImageButton)findViewById(R.id.raspored);
+        plan=(ImageButton)findViewById(R.id.skica);
+
+        schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScheduleActivity.this, ScheduleImageActivity.class));
             }
         });
-        skica.setOnClickListener(new View.OnClickListener() {
+        plan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScheduleActivity.this, PlanImageActivity.class));

@@ -41,8 +41,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitStart"
                 android:padding="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/jobfair"/>
+                android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/newsContent"
