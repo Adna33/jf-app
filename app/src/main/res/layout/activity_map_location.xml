@@ -82,14 +82,14 @@
                 android:layout_height="61dp"
                 android:id="@+id/facebook"
                 android:src="@drawable/facebook"
-                android:background="none"
+                android:background="@color/eestecTitle"
                 android:scaleType="fitXY" />
             <ImageButton
                 android:layout_width="76dp"
                 android:layout_height="61dp"
                 android:id="@+id/imageButton5"
                 android:src="@drawable/jficon"
-                android:background="none"
+                android:background="@color/eestecTitle"
                 android:scaleType="fitXY"
                 android:tint="@color/white" />
             <ImageButton
@@ -97,7 +97,7 @@
                 android:layout_height="62dp"
                 android:id="@+id/eestec"
                 android:src="@drawable/eestec_logo_white"
-                android:background="none"
+                android:background="@color/eestecTitle"
                 android:scaleType="fitXY"
                 android:layout_width="110dp" />
 
