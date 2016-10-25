@@ -30,11 +30,12 @@ public class MapLocationActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
         }
+
         map=(ImageView)findViewById(R.id.location);
         PhotoViewAttacher photoView = new PhotoViewAttacher(map);
         photoView.update();
-
-        ImageButton facebook = (ImageButton) findViewById(R.id.facebook);
+/*
+        ImageView facebook = (ImageView) findViewById(R.id.facebook);
         facebook.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -43,7 +44,7 @@ public class MapLocationActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton jf = (ImageButton) findViewById(R.id.imageButton5);
+        ImageView jf = (ImageView) findViewById(R.id.imageButton5);
         jf.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -52,14 +53,14 @@ public class MapLocationActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton eestec = (ImageButton) findViewById(R.id.eestec);
+        ImageView eestec = (ImageView) findViewById(R.id.eestec);
         eestec.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.eestec-sa.ba"));
                 startActivity(i);
             }
-        });
+        });*/
     }
 
     @Override

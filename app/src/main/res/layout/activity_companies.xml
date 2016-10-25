@@ -11,7 +11,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecdarkRed"
+            android:background="@color/eestecRed"
             android:layout_marginTop="5dp">
 
                 <TextView
@@ -27,48 +27,39 @@
                     android:gravity="center" />
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="150dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@color/eestecdarkGrey">
 
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/api"
+                    />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="110dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_margin="5dp"
-                    android:background="@color/eestecdarkGrey">
+                    android:src="@drawable/microsoft_logo"
+                    />
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/api"
-                            />
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/infobip_icon"
+                    android:layout_gravity="center_vertical" />
+        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/microsoft"
-                            />
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/infobip"
-                            />
-                </LinearLayout>
-        </HorizontalScrollView>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecdarkRed">
+            android:background="@color/eestecRed">
 
                 <TextView
                     android:layout_width="wrap_content"

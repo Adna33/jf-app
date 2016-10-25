@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context="eestec.jobfairapp.MapLocationActivity"
-    android:background="@color/eestecdarkGrey">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecdarkRed"
+            android:background="@color/white"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp">
 
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="Pronađite nas"
                 android:id="@+id/textView8"
-                android:textColor="#ffffff"
+                android:textColor="@color/eestecRed"
                 android:textStyle="bold"
                 android:textSize="23dp" />
 
@@ -72,29 +72,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="76dp"
                 android:layout_height="61dp"
                 android:id="@+id/facebook"
                 android:src="@drawable/facebook"
-                android:background="@color/eestecTitle"
-                android:scaleType="fitXY" />
-            <ImageButton
+
+                android:scaleType="fitXY"
+                android:clickable="true" />
+            <ImageView
                 android:layout_width="76dp"
                 android:layout_height="61dp"
                 android:id="@+id/imageButton5"
                 android:src="@drawable/jficon"
-                android:background="@color/eestecTitle"
                 android:scaleType="fitXY"
-                android:tint="@color/white" />
-            <ImageButton
+                android:tint="@color/white"
+                android:clickable="true" />
+            <ImageView
 
                 android:layout_height="62dp"
                 android:id="@+id/eestec"
-                android:src="@drawable/eestec_logo_white"
-                android:background="@color/eestecTitle"
+                android:src="@drawable/eestec_icon"
                 android:scaleType="fitXY"
-                android:layout_width="110dp" />
+                android:layout_width="110dp"
+                android:clickable="true" />
+
 
         </LinearLayout>
 
