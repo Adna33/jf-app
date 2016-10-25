@@ -65,7 +65,11 @@ public class CompaniesActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
+
                 new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije");
+                for (int ib=1;ib<=5;ib++)
+                {new CompaniesAsyncTask().execute("http://api.jobfair.ba/api/kompanije/"+String.valueOf(ib));}
+
             }
         });
 
@@ -162,8 +166,8 @@ public class CompaniesActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Boolean result) {
             adapter.notifyDataSetChanged();
-            if(result == false)
-                Toast.makeText(getApplicationContext(), "Nije moguće učitati podatke", Toast.LENGTH_LONG).show();
+           // if(result == false)
+              //  Toast.makeText(getApplicationContext(), "Nije moguće učitati podatke", Toast.LENGTH_LONG).show();
 
         }
     }

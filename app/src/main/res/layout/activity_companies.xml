@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="eestec.jobfairapp.CompaniesActivity"
-    android:background="@color/eestecdarkGrey">
+    android:background="@color/eestecGrey">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecRed"
-            android:layout_marginTop="5dp">
+            android:background="@color/eestecTitle"
+            >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="5dp"
-            android:background="@color/eestecdarkGrey">
+            android:background="@color/eestecGrey">
 
                 <ImageView
                     android:layout_width="110dp"
@@ -59,7 +59,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecRed">
+            android:background="@color/eestecTitle">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
 
 
         <ListView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:id="@+id/listView" />

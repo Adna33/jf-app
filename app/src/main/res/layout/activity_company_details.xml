@@ -24,12 +24,12 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
+            android:layout_height="120dp"
+            android:scaleType="fitCenter"
             android:padding="3dp"
             android:adjustViewBounds="true"
             android:id="@+id/iv_company_logo"
-            android:src="@drawable/company_overview" />
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,40 +39,55 @@
             android:id="@+id/tv_company_name"
             android:textSize="25dp"
             android:textColor="@color/eestecTitle"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Okupacija: "
+            android:text="Djelatnost "
             android:textColor="@color/white"
-            android:id="@+id/textView2" />
+            android:id="@+id/textView2"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:textColor="@color/white"
-            android:id="@+id/tv_okupacija" />
+            android:id="@+id/tv_okupacija"
+            android:layout_marginBottom="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Web stranica:"
+            android:text="Web stranica"
             android:autoLink="web"
-            android:id="@+id/web" />
+            android:id="@+id/web"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/tv_web" />
+            android:id="@+id/tv_web"
+            android:autoLink="web"
+            android:textColorLink="@color/eestecTitle"
+
+            android:layout_marginBottom="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,46 +95,57 @@
             android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Adresa"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView3"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/tv_adresa" />
+            android:id="@+id/tv_adresa"
+            android:layout_marginBottom="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="E-mail:"
+            android:text="E-mail"
             android:textColor="@color/white"
-            android:id="@+id/textView4" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:textColor="@color/white"
-            android:id="@+id/tv_mail" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Kontakt telefon:"
-            android:textColor="@color/white"
-            android:id="@+id/textView5" />
+            android:id="@+id/textView4"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
+            android:layout_gravity="center_horizontal"
             android:textColor="@color/white"
+            android:id="@+id/tv_mail"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Kontakt telefon"
+            android:textColor="@color/white"
+            android:id="@+id/textView5"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
             android:id="@+id/tv_telefon" />
 
 

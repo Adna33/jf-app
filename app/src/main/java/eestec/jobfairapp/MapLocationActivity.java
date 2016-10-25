@@ -34,7 +34,7 @@ public class MapLocationActivity extends AppCompatActivity {
         map=(ImageView)findViewById(R.id.location);
         PhotoViewAttacher photoView = new PhotoViewAttacher(map);
         photoView.update();
-/*
+
         ImageView facebook = (ImageView) findViewById(R.id.facebook);
         facebook.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -60,7 +60,7 @@ public class MapLocationActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.eestec-sa.ba"));
                 startActivity(i);
             }
-        });*/
+        });
     }
 
     @Override

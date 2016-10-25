@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/eestecdarkGrey">
+    android:background="@color/eestecGrey">
 
     <LinearLayout
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_margin="5dp"
-         android:background="@color/eestecdarkGrey">
+         android:background="@color/eestecGrey">
 
          <ImageView
              android:id="@+id/company_logo"
@@ -31,7 +31,7 @@
                  android:layout_height="wrap_content"
                  android:layout_marginTop="20dp"
                  android:textSize="20dp"
-                 android:textColor="@color/eestecTitle"
+                 android:textColor="@color/white"
                  android:textStyle="bold"
                  android:text="Company name"/>
 
