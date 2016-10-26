@@ -18,14 +18,7 @@ public class AboutUsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        ActionBar actionBar = getSupportActionBar();
 
-        if (actionBar != null)
-        {
-
-            actionBar.setDisplayHomeAsUpEnabled(true); //Set this to true if selecting "home" returns up by a single level in your UI rather than back to the top level or front page.
-            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
-        }
         ImageButton eestecLogo = (ImageButton) findViewById(R.id.eestecLogo);
         eestecLogo.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -41,14 +34,10 @@ public class AboutUsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // app icon in action bar clicked; go home
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                finish();
                 return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
+        return super.onOptionsItemSelected(item);
     }
 
 }

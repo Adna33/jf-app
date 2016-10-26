@@ -37,14 +37,6 @@ public class NewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
-        ActionBar actionBar = getSupportActionBar();
-
-        if (actionBar != null)
-        {
-
-            actionBar.setDisplayHomeAsUpEnabled(true); //Set this to true if selecting "home" returns up by a single level in your UI rather than back to the top level or front page.
-            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow); // set a custom icon for the default home button
-        }
 
 
         newsList = new ArrayList<News>();
@@ -61,7 +53,7 @@ public class NewsActivity extends AppCompatActivity {
                     Intent myIntent = new Intent(view.getContext(), NewsDetailsActivity.class);
                     content = newsList.get(position).getContent();
                     title = newsList.get(position).getName();
-                     newsId= newsList.get(position).getId();
+                    newsId= newsList.get(position).getId();
                     myIntent.putExtra("NEWS_CONTENT",content);
                     myIntent.putExtra("NEWS_TITLE",title);
                     myIntent.putExtra("NEWS_ID",newsId);
@@ -139,14 +131,10 @@ public class NewsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // app icon in action bar clicked; go home
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                finish();
                 return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
+        return super.onOptionsItemSelected(item);
     }
 
 }

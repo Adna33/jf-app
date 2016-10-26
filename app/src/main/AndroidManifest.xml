@@ -39,48 +39,48 @@
         <activity
             android:name=".AboutUsActivity"
             android:label="@string/title_activity_about_us"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MapLocationActivity"
             android:label="@string/title_activity_map"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".CompaniesActivity"
-            android:label=""
-            android:theme="@style/AppTheme" />
+            android:label="Partneri"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ScheduleActivity"
             android:label="@string/title_activity_schedule"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".NewsActivity"
             android:label="@string/title_activity_news"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".NewsDetailsActivity"
             android:label="@string/title_activity_newsdetails"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".NewsActivity"/>
         <activity
             android:name=".CompanyDetailsActivity"
             android:label="@string/title_activity_company"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".CompaniesActivity"/>
         <activity
             android:name=".ScheduleImageActivity"
             android:label="@string/title_activity_schedule_image"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".ScheduleActivity"/>
         <activity
             android:name=".PlanImageActivity"
             android:label="@string/title_activity_plan_image"
             android:theme="@style/AppTheme"
-            ></activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
+            android:parentActivityName=".ScheduleActivity"></activity>
 
 
     </application>

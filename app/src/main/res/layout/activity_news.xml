@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="eestec.jobfairapp.NewsActivity"
-    android:background="@color/eestecdarkGrey">
+    android:background="@color/white">
 
     <ListView
         android:id="@+id/listViewNews"

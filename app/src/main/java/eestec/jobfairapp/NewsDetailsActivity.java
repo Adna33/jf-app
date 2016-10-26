@@ -31,21 +31,13 @@ import java.net.URL;
  * Created by XMAN on 8.10.2016.
  */
 public class NewsDetailsActivity extends AppCompatActivity {
-    News selectedNews;
     String newsId;
-    Bitmap thumb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsdetails);
-        ActionBar actionBar = getSupportActionBar();
 
-        if (actionBar != null)
-        {
-
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
-        }
 
         TextView content = (TextView) findViewById(R.id.newsContent);
         TextView tv_title = (TextView) findViewById(R.id.news_details_name);
@@ -63,25 +55,19 @@ public class NewsDetailsActivity extends AppCompatActivity {
 
         }
 
-        if(newsId!=null)
+        if(newsId != null)
          new LoadImageTask(image).execute("http://api.jobfair.ba/static/news/t_"+newsId+".jpg");
-       // else
-         //   new LoadImageTask(image).execute("http://api.jobfair.ba/static/news/t_2.jpg");
-
 
     }
 
-        @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(this, NewsActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                finish();
                 return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
+        return super.onOptionsItemSelected(item);
     }
 
 }

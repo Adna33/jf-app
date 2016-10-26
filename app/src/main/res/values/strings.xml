@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">JobFAIR</string>
-    <string name="companyweb"></string>
     <string name="title_activity_tab">TabActivity</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Postavke</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_about_us">Informacije</string>
     <string name="title_activity_map">Mapa</string>
@@ -10,8 +9,7 @@
     <string name="title_activity_schedule">Raspored</string>
     <string name="title_activity_news">Novosti</string>
     <string name="title_activity_newsdetails">Detalji</string>
-    <string name="title_activity_company">O Kompaniji</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_company">O kompaniji</string>
     <string name="title_activity_schedule_image">Raspored sajma</string>
     <string name="title_activity_plan_image">Skica sajma</string>
     <string name="linkEestec"><a href="http://http://www.eestec-sa.ba/">http://www.eestec-sa.ba/</a></string>

@@ -13,11 +13,10 @@ import android.widget.ImageView;
 /**
  * Created by Korisnik on 10.9.2016.
  */
-public class SplashScreen extends AppCompatActivity {
+public class SplashScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.splash_screen);
 
 

@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/white_jf"
-        android:background="@drawable/border_jobfair"
         android:scaleType="centerInside"/>
     <ScrollView
         android:layout_width="wrap_content"
@@ -38,7 +37,7 @@
                 android:src="@drawable/ic_news_iv"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
-                android:background="@drawable/border_top"
+                android:background="@drawable/border_bottom"
                 />
         </LinearLayout>
 
@@ -54,7 +53,7 @@
                 android:src="@drawable/ic_info_iv"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
-                android:background="@drawable/border_top_bottom_info"
+                android:background="@drawable/border_bottom"
                 />
         </LinearLayout>
 
@@ -85,7 +84,7 @@
                 android:src="@drawable/ic_raspored_iv"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
-                android:background="#AB0000" />
+                android:background="@drawable/border_bottom" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,7 +98,7 @@
                 android:id="@+id/imageButton3"
                 android:src="@drawable/ic_mapa_iv"
                 android:scaleType="fitStart"
-                android:background="@drawable/borders" />
+                android:background="@drawable/border_bottom" />
         </LinearLayout>
     </LinearLayout>
     </ScrollView>

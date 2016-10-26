@@ -9,12 +9,11 @@ import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         ImageButton imgBtn0 = (ImageButton) findViewById(R.id.imageButton0);

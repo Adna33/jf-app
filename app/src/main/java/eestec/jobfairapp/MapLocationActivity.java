@@ -23,13 +23,6 @@ public class MapLocationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_location);
-        ActionBar actionBar = getSupportActionBar();
-
-        if (actionBar != null) {
-
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.left_arrow);
-        }
 
         map=(ImageView)findViewById(R.id.location);
         PhotoViewAttacher photoView = new PhotoViewAttacher(map);
@@ -67,13 +60,10 @@ public class MapLocationActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                finish();
                 return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
+        return super.onOptionsItemSelected(item);
     }
 
 }
