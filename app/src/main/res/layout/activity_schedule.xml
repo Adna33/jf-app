@@ -40,7 +40,6 @@
             android:layout_alignBottom="@id/raspored"
             android:layout_margin="1dp"
             android:gravity="center"
-            android:shadowColor="@color/eestecdarkGrey"
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="2"/>
@@ -74,7 +73,6 @@
             android:layout_alignBottom="@id/skica"
             android:layout_margin="1dp"
             android:gravity="center"
-            android:shadowColor="@color/eestecdarkGrey"
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="2" />
