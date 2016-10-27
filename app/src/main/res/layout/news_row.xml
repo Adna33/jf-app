@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D9D9D9"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp">
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
 
     <LinearLayout
@@ -47,6 +47,18 @@
             android:textSize="15dp"
             android:textColor="#000000"
             android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/news_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">>>"
+            android:textSize="10dp"
+            android:textColor="@color/eestecTitle"
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:paddingRight="5dp"/>
+
     </LinearLayout>
 
 
