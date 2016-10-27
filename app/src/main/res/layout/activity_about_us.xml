@@ -16,30 +16,6 @@
         android:layout_centerHorizontal="true"
         >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:background="@color/containergrey">
-        <ScrollView
-            android:id="@+id/scroller"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            android:fillViewport="true">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/textView"
-                android:textSize="15dp"
-                android:text="@string/JobFARIR_text"
-                android:textColor="#000000"
-                android:padding="4dp" />
-        </ScrollView>
-        </LinearLayout>
-
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
@@ -50,7 +26,7 @@
                 android:layout_width="220dp"
                 android:layout_height="97dp"
                 android:id="@+id/imageView2"
-                android:src="@drawable/jf_logo"
+                android:src="@drawable/jf_logo_a"
                 android:layout_centerHorizontal="true" />
 
             <!--<ImageButton
@@ -71,6 +47,31 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/containergrey"
+            android:layout_marginTop="5dp">
+        <ScrollView
+            android:id="@+id/scroller"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView"
+                android:textSize="15dp"
+                android:text="@string/JobFARIR_text"
+                android:textColor="#000000"
+                android:padding="4dp" />
+        </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="@color/eestecRed">
@@ -85,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/jftext"
                     android:textSize="15dp"
-                    android:text="@string/JobFARIR_text"
+                    android:text="@string/JobFARIR_text2"
                     android:textColor="@color/white"
                     android:padding="4dp" />
             </ScrollView>
