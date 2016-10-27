@@ -8,7 +8,7 @@
     android:paddingRight="5dp"
     android:paddingTop="5dp"
     tools:context="eestec.jobfairapp.CompanyDetailsActivity"
-    android:background="@color/white">
+    android:background="@color/containergrey">
     <ScrollView
         android:id="@+id/scroller"
         android:layout_width="fill_parent"
@@ -19,7 +19,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/containergrey"
+        android:background="@color/backgroundwhite"
         android:padding="5dp">
 
 
@@ -46,15 +46,23 @@
             android:id="@+id/iv_company_logo"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Djelatnost "
-            android:textColor="@color/white"
-            android:id="@+id/textView2"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:background="@color/containergrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Djelatnost"
+                android:id="@+id/d"
+                android:textColor="@color/eestecTitle"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,25 +70,32 @@
             android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:id="@+id/tv_okupacija"
             android:layout_marginBottom="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Web stranica"
-            android:autoLink="web"
-            android:id="@+id/web"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:background="@color/containergrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web stranica"
+                android:id="@+id/w"
+                android:textColor="@color/eestecTitle"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
@@ -90,35 +105,51 @@
 
             android:layout_marginBottom="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Adresa"
-            android:id="@+id/textView3"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:background="@color/containergrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresa"
+                android:id="@+id/a"
+                android:textColor="@color/eestecTitle"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/tv_adresa"
             android:layout_marginBottom="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="E-mail"
-            android:textColor="@color/white"
-            android:id="@+id/textView4"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:background="@color/containergrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:id="@+id/e"
+                android:textColor="@color/eestecTitle"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,26 +157,34 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:id="@+id/tv_mail"
             android:layout_marginBottom="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Kontakt telefon"
-            android:textColor="@color/white"
-            android:id="@+id/textView5"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:background="@color/containergrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kontakt telefon"
+                android:id="@+id/k"
+                android:textColor="@color/eestecTitle"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_gravity="center_horizontal"
             android:id="@+id/tv_telefon" />
 
