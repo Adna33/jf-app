@@ -86,6 +86,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/jftext"
                     android:textSize="15dp"
+                    android:fontFamily="sans-serif"
                     android:text="@string/JobFARIR_text2"
                     android:textColor="@color/white"
                     android:padding="5dp" />
