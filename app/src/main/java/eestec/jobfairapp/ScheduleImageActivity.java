@@ -15,6 +15,7 @@ public class ScheduleImageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_schedule_image);
 
         raspored=(ImageView)findViewById(R.id.iv_raspored);
         PhotoViewAttacher photoView = new PhotoViewAttacher(raspored);
