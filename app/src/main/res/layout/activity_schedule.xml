@@ -19,7 +19,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/raspored"
-            android:src="@drawable/eestec_logo_white"
+            android:src="@drawable/raspored"
             android:alpha="0.4"
             android:layout_margin="2dp"
             android:scaleType="fitXY" />
@@ -53,7 +53,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/skica"
-            android:src="@drawable/eestec_logo_white"
+            android:src="@drawable/raspored"
             android:alpha="0.4"
             android:layout_margin="2dp"
             android:scaleType="fitXY" />

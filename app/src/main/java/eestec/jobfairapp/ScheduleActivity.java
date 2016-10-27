@@ -23,11 +23,6 @@ import android.widget.ViewSwitcher;
  */
 public class ScheduleActivity extends AppCompatActivity {
 
-
-    int[] resources = {
-            R.drawable.tlocrt_test,
-            R.drawable.jf_raspored_test
-    };
     ImageButton schedule;
     ImageButton plan;
 
