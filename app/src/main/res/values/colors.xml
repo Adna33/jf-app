@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="eestecdarkRed">#ab0000</color>
-    <color name="eestecRed">#ee2f2e</color>
+    <color name="eestecRed">#E63538</color>
     <color name="darkRed">#df2b2a</color>
     <color name="white">#ffff</color>
     <color name="orange">#d57946</color>
@@ -14,4 +14,6 @@
     <color name="eestecdarkGrey">#18191a</color>
     <color name="eestecGrey">#272829</color>
     <color name="eestecTitle">#d92528</color>
+    <color name="backgroundwhite">#fafafa</color>
+    <color name="containergrey">#d9d9d9</color>
 </resources>

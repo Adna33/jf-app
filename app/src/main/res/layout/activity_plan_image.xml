@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@color/eestecdarkGrey"
+    android:background="@color/backgroundwhite"
     tools:context="eestec.jobfairapp.PlanImageActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/iv_tlocrt"
-            android:src="@drawable/tlocrt_test"
+            android:src="@drawable/jf_raspored_test"
             android:scaleType="fitCenter"
             android:layout_gravity="center"
-            android:background="@color/eestecdarkGrey"
+            android:background="@color/containergrey"
             android:adjustViewBounds="false" />
     </FrameLayout>
 

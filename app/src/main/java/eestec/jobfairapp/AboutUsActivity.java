@@ -19,14 +19,14 @@ public class AboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        ImageButton eestecLogo = (ImageButton) findViewById(R.id.eestecLogo);
+        /*ImageButton eestecLogo = (ImageButton) findViewById(R.id.eestecLogo);
         eestecLogo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.eestec-sa.ba"));
                 startActivity(i);
             }
-        });
+        });*/
 
 
     }

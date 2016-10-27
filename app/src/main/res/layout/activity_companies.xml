@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="eestec.jobfairapp.CompaniesActivity"
-    android:background="@color/white">
+    android:background="@color/backgroundwhite">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecTitle"
+            android:background="@color/containergrey"
             >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GENERALNI GODIŠNJI PARTNERI"
+                    android:text="Generalni godišnji partneri"
                     android:id="@+id/textView8"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/eestecTitle"
                     android:textStyle="bold"
                     android:textSize="23dp"
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="5dp"
-            android:background="@color/eestecGrey">
+            android:background="#B0B0B0">
 
                 <ImageView
                     android:layout_width="110dp"
@@ -50,7 +50,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:scaleType="fitStart"
+                    android:scaleType="fitEnd"
                     android:src="@drawable/infobip_icon"
                     android:layout_gravity="center_vertical" />
         </LinearLayout>
@@ -59,14 +59,14 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/eestecTitle">
+            android:background="@color/containergrey">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="UČESNICI SAJMA"
+                    android:text="Učesnici sajma"
                     android:id="@+id/textView9"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/eestecTitle"
                     android:textStyle="bold"
                     android:textSize="23dp"
                     android:layout_gravity="center_horizontal"

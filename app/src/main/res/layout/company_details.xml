@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/eestecGrey">
+    android:background="#B0B0B0">
 
     <LinearLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_margin="5dp"
-         android:background="@color/eestecGrey">
+         android:background="#B0B0B0">
 
          <ImageView
              android:id="@+id/company_logo"
